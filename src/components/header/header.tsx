@@ -99,12 +99,7 @@ export default function Header() {
         </TextSlideIn>
         <TextSlideIn delay={1.1}>
           <button>
-            <HoverText
-              href="https://new.accounteer.com/"
-              target="_blank"
-              text="join discord"
-              rel="noopener noreferrer"
-            />
+            <HoverText href="" text="join discord" />
           </button>
         </TextSlideIn>
       </div>

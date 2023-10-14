@@ -29,9 +29,29 @@ body {
   position: relative;
   overflow-x: hidden;
   background-color: #130622;
-  background-color: #141414;
+  // background-color: #141414;
   font-family: "Podkova", serif;
   color: white;
+}
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
 }
 
 .main {

@@ -24,7 +24,6 @@ export default function Home() {
         height={28}
         alt=""
       />
-
       <Image
         src="/grain.gif"
         className="grain"
@@ -32,10 +31,9 @@ export default function Home() {
         height={28}
         alt=""
       />
-
-      <Cursor navbarElement={navbarElement} />
       <Navigation ref={navbarElement} />
       <Header />
+      <Cursor navbarElement={navbarElement} />
     </motion.div>
   );
 }
