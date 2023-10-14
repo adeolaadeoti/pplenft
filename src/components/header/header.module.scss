@@ -1,0 +1,88 @@
+.header {
+  height: 80rem;
+  position: relative;
+  top: 12rem;
+  text-align: center;
+  // background-color: rebeccapurple;
+
+  .hero {
+    padding-top: -40rem;
+    h1 {
+      font-family: "Oswald", sans-serif;
+      font-weight: 100;
+
+      font-size: 12.8rem;
+      line-height: 102.7%;
+      letter-spacing: -6.427px;
+      text-transform: uppercase;
+      background: linear-gradient(
+        128deg,
+        #fff 19.96%,
+        rgba(255, 255, 255, 0) 89.37%
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .flex {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .yellow {
+      background: linear-gradient(90deg, #fff -23.21%, #ffe49f 50%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+
+.willSmith {
+  position: absolute;
+  width: 99.2rem;
+  height: 78.9rem;
+  padding-left: 10rem;
+  padding-top: 7rem;
+}
+
+.cube {
+  position: absolute;
+  top: 5%;
+  right: 0;
+}
+
+.description {
+  margin-left: 110rem;
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+
+  p {
+    text-align: left;
+    width: 65%;
+    color: #fff;
+    font-family: "Podkova", sans-serif;
+    font-weight: 400;
+    line-height: 136.8%; /* 21.888px */
+    opacity: 0.7;
+  }
+  button {
+    all: unset;
+    border-radius: 1.5rem;
+    border: 1px solid #7f7f7f;
+    background: linear-gradient(
+      112deg,
+      #ffffff51 19.08%,
+      rgba(255, 255, 255, 0) 103.48%
+    );
+    backdrop-filter: blur(27px);
+    padding: 1.5rem 3rem;
+    font-family: "Chaney", sans-serif;
+    cursor: pointer;
+  }
+}
