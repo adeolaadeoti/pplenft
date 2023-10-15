@@ -55,8 +55,12 @@
   }
 }
 
-.navActive {
+.navRemoveBlendMode {
   mix-blend-mode: unset !important;
+}
+
+.navAddBlendMode {
+  mix-blend-mode: difference;
 }
 
 // nav contents

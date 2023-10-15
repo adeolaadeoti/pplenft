@@ -9,16 +9,34 @@ interface INavigation {}
 const Navigation = React.forwardRef<HTMLDivElement, INavigation>(
   (props, ref) => {
     const [isActive, setIsActive] = React.useState(false);
+    const [addBlend, setAddBlend] = React.useState(true);
+
+    const handleToggle = () => {
+      setIsActive(!isActive);
+      setTimeout(() => {
+        if (!isActive) {
+          setAddBlend(false);
+        } else {
+          setAddBlend(true);
+        }
+      }, 1000);
+    };
 
     return (
-      <div className={`${styles.nav} ${isActive ? styles.navActive : ""}`}>
+      <div
+        className={`${styles.nav} ${
+          isActive
+            ? styles.navRemoveBlendMode
+            : addBlend
+            ? styles.navAddBlendMode
+            : ""
+        }`}
+      >
         <Image src="/pplenft.svg" alt="pple nft logo" width={73} height={22} />
         <div>
           <Magnetic>
             <div
-              onClick={() => {
-                setIsActive(!isActive);
-              }}
+              onClick={handleToggle}
               className={`${styles.burger} ${
                 isActive ? styles.burgerActive : ""
               }`}

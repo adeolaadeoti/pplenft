@@ -100,7 +100,8 @@ function MenuList({ data }: IMenuList) {
         return (
           <motion.li
             variants={menuItemVariants}
-            whileHover={{ x: 10 }}
+            whileHover={{ transform: "translateX(10px)" }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
             key={index}
           >
             <NextLink className={styles.link} href={data.href}>
