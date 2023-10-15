@@ -9,7 +9,12 @@ export default function Home() {
   const navbarElement = React.useRef(null);
 
   return (
-    <motion.div className="main" initial="initial" animate="animate">
+    <motion.div
+      className="main"
+      initial="initial"
+      animate="animate"
+      exit="exit"
+    >
       <Image
         src="/blur-yellow.png"
         className="yellow"

@@ -4,27 +4,42 @@
   align-items: center;
   width: 100%;
   justify-content: space-between;
-  z-index: 1;
-  mix-blend-mode: difference;
+  z-index: 11;
+  // mix-blend-mode: difference;
   img {
     margin: 3rem;
   }
+
   .burger {
     cursor: pointer;
     position: relative;
     display: flex;
+    z-index: 2;
+
     gap: 0.8rem;
     flex-direction: column;
     padding: 3rem;
     pointer-events: none;
+
     &::before,
     &::after {
       display: block;
       content: "";
       width: 3rem;
       height: 0.2rem;
-      mix-blend-mode: difference;
       background-color: white;
+      transition: transform 0.3s;
+    }
+  }
+  .burgerActive {
+    gap: unset !important;
+    &::after {
+      transform: rotate(45deg);
+      margin-top: -1.5px;
+    }
+
+    &::before {
+      transform: rotate(-45deg);
     }
   }
   .bounds {
@@ -38,4 +53,48 @@
       transform: scale(3);
     }
   }
+}
+
+.navActive {
+  mix-blend-mode: unset !important;
+}
+
+// nav contents
+.menu {
+  height: 100vh;
+  width: 50vw;
+  background-color: rgb(41, 41, 41);
+  position: fixed;
+  right: 0;
+  top: 0;
+  color: white;
+  z-index: -1;
+}
+
+.body {
+  padding: 9rem;
+
+  .menuList {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10rem;
+    gap: 2rem;
+    a {
+      text-decoration: none;
+      color: white;
+      font-weight: 300;
+      text-align: left;
+      font-size: 5.2rem;
+    }
+  }
+}
+
+.svgCurve {
+  position: absolute;
+  top: 0;
+  left: -99px;
+  width: 100px;
+  height: 100%;
+  fill: rgb(41, 41, 41);
+  stroke: none;
 }

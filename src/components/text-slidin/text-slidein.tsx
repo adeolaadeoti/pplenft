@@ -1,10 +1,11 @@
-import { motion } from "framer-motion";
+import { Transition, motion } from "framer-motion";
 import React from "react";
 import styles from "./text-slidein.module.scss";
 
-const transition: { duration: number; ease: number[] } = {
-  duration: 0.7,
-  ease: [0.6, 0.01, -0.05, 0.9],
+const transition: Transition = {
+  duration: 0.8,
+  type: "spring",
+  stiffness: 50,
 };
 
 interface ITextSlideIn {

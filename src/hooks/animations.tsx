@@ -2,6 +2,7 @@ import * as React from "react";
 import Lenis from "@studio-freight/lenis";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { AnimatePresence } from "framer-motion";
 gsap.registerPlugin(ScrollTrigger);
 
 const useSmoothScroll = () => {
@@ -30,8 +31,6 @@ const useSmoothScroll = () => {
     });
     setLenis(lenis);
 
-    // lenis.on('scroll', () => ScrollTrigger.update())
-
     return () => {
       lenis.destroy();
       setLenis(null);
@@ -41,7 +40,8 @@ const useSmoothScroll = () => {
 
 const Animations: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useSmoothScroll();
-  return <>{children}</>;
+
+  return <>{children} </>;
 };
 
 export default Animations;

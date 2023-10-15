@@ -4,6 +4,7 @@ import styles from "./header.module.scss";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 import TextSlideIn from "../text-slidin/text-slidein";
 import HoverText from "../hover-text/hover-text";
+import { StaggeredText } from "../staggered-text/staggered-text";
 
 export default function Header() {
   const mouse = {
