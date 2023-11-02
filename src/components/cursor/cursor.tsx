@@ -27,7 +27,7 @@ export default function CustomCursor({ navbarElement }: Props) {
     y: useMotionValue(1),
   };
 
-  const smoothOptions = { damping: 20, stiffness: 300, mass: 0.5 };
+  const smoothOptions = { damping: 20, stiffness: 300, mass: 1.5 };
   const smoothMouse = {
     x: useSpring(mouse.x, smoothOptions),
     y: useSpring(mouse.y, smoothOptions),
